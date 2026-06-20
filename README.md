@@ -82,21 +82,17 @@ Register that exact public key with the SoC SSH key system.
 
 Before testing `stujump`, you need to register the public key you just generated.
 
-You must be on the **SoC VPN** or the **physical SoC/NUS network** for this step.
+You must be on the **SoC VPN** or the **physical SoC network** for this step.
 
-The normal NUS VPN may not be enough.
+The normal NUS VPN is NOT enough to get you anywhere.
 
-SSH into the SoC key registration server:
+ssh into the SoC key registration server:
 
 ```bash
 ssh e1234567@skeys.comp.nus.edu.sg
 ```
 
-Replace `e1234567` with your own SoC username, for example:
-
-```bash
-ssh e1718960@skeys.comp.nus.edu.sg
-```
+Replace `e1234567` with your own SoC username.
 
 This opens an interactive key registration menu.
 
@@ -117,7 +113,7 @@ cat ~/.ssh/id_ed25519_nus_soc.pub
 Copy the full output. It should look like:
 
 ```text
-ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAA... e1718960@nus-soc
+ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAA... e1234567@nus-soc
 ```
 
 Paste that full public key into the `skeys` prompt.
@@ -217,4 +213,3 @@ ssh xlogin
 Replace xlogin with whatever cluster you need.
 
 
-## 5. Create the SSH config
